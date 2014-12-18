@@ -102,14 +102,14 @@ make_spl(points_t * pts, spline_t * spl)
 		for (k = 0; k < pts->n; k++)
 			add_to_entry_matrix(eqs, j, nb,  y[k] * fi( j, x[k]));
 	}
-        write_matrix(eqs, stdout);
+/*        write_matrix(eqs, stdout);*/
 
 
 	if (piv_ge_solver(eqs)) {
 		spl->n = 0;
 		return;
 	}
-        write_matrix(eqs, stdout);
+/*        write_matrix(eqs, stdout);*/
 	
         if (alloc_spl(spl, nb) == 0) {
                 for (i = 0; i < spl->n; i++) {
